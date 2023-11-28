@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontPrincipal);
+}
+html, body{
+    width: 100vw;
+    min-height: 100vh;
+    background: white url("../Imagens/Fundo/FundoBackground.svg") center no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,126 @@
+@import url(styles/reset.css);
+@import url(styles/cards.css);
+
+@font-face {
+    font-family: "fontPrincipal";
+    src: url(fonts/BarlowCondensed-SemiBold.ttf);
+}
+
+:root{
+    --fontPrincipal: "fontPrincipal";
+    --cor-azul-escuro: #2C424F;
+    --cor-laranja: #D98943;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+@media screen and (max-width: 564px){
+    .main{
+        padding: 25px 0px;
+    }
+} 
+
+section#containerPesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+div#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 5px;
+}
+div#logo > img{
+    width: 200px;
+    object-fit: cover;
+}
+div#logo > p{
+    color: var(--cor-azul-escuro);
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+@media screen and (min-width: 768px){
+    div#logo > img{
+        width: 250px;
+    }
+    div#logo > p{
+        font-size: 1.4em;
+        text-align: center;
+        letter-spacing: 1.8px;
+    }
+}
+
+
+
+div#pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 43px;
+    max-width: 600px;
+    margin-top: 5px;
+    border-radius: 50px;
+    border: 2px solid var(--cor-azul-escuro);
+}
+div#pesquisa > input{
+    width: 87%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 1.1em;
+    border-radius: 50px 0px 0px 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+span#lupa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 1px 2px 1px 0px;
+    border-radius: 50%;
+    background-color: #D9704A;
+    cursor: pointer;
+}
+span#lupa > img{
+    width: 25px;
+    transform: rotate(90deg);
+}
+@media screen and (min-width: 768px){
+    div#pesquisa{
+        height: 47px;
+        max-width: 650px;
+        border: 3px solid var(--cor-azul-escuro);
+    }
+    span#lupa{
+        width: 44px;
+        height: 44px;
+    }
+    div#pesquisa > input{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 550px){
+    div#pesquisa > input{
+        width: 80%;
+    }
+    span#lupa > img{
+        width: 20px;
+        transform: rotate(90deg);
+    }
+}
