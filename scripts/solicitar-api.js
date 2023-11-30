@@ -13,6 +13,7 @@ export default async function bookApi(nomeLivro){
     } catch (error) {
         const containerCards = document.querySelector('#containerCards')
         containerCards.innerHTML = "Não foi possivel encontrar o livro"
+        containerCards.style.height = '20px'
         console.error(error)
     }
 }

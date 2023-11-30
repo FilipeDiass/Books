@@ -25,7 +25,7 @@ export default function criaCardLivro(livro){
                     <p>${livro.paginas}</p>
                 </div>
             </div>
-            <a href="${livro.compra}"><button class="compraLivro">COMPRAR</button></a>
+            <a href="${livro.compra}" target="_blank"><button class="compraLivro">COMPRAR</button></a>
         </div>`
         
     const main = document.querySelector('main')
