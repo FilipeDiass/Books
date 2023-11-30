@@ -3,8 +3,14 @@ section#containerCards{
     align-items: center;
     justify-content: center;
     width: 85%;
+    height: 0px;
     max-width: 700px;
     margin-top: 30px;
+    transition: .5s;
+    overflow: hidden;
+}
+section.animationContainer{
+    height: 300px !important;
 }
 div.card{
     display: flex;
@@ -13,6 +19,11 @@ div.card{
     flex-wrap: wrap;
     width: 100%;
     gap: 20px;
+    opacity: 0%;
+    transition: .5s;
+}
+div.animationCard{
+    opacity: 100%;
 }
 picture.capa{
     display: flex;
@@ -21,7 +32,7 @@ picture.capa{
     width: 190px;
     height: 300px;
     border-radius: 10px;
-    background-color: var(--cor-azul-escuro);
+    /* background-color: var(--cor-azul-escuro); */
 }
 picture.capa > img{
     width: 100%;
@@ -47,6 +58,9 @@ div.infoLivro > h1{
 }
 div.infoLivro > div  p{
     color: var(--cor-azul-escuro);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 div.Publinas{
     display: flex;
@@ -81,5 +95,8 @@ button.compraLivro:hover{
         padding: initial;
         border-radius: initial;
         background-color: initial;
+    }
+    section.animationContainer{
+        height: 630px !important;
     }
 }

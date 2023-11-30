@@ -6,7 +6,13 @@ export default function cardLivro(infoLivro){
 
     const containerCards = document.querySelector('#containerCards')
     containerCards.innerHTML = ""
-    containerCards.appendChild(card)    
+    containerCards.appendChild(card)   
+    
+
+    containerCards.classList.add('animationContainer')
+    setTimeout(()=>{
+        card.classList.add("animationCard")
+    }, 500)
 }
 
 function criaObjeto(infoLivro){
@@ -26,7 +32,7 @@ function criaObjeto(infoLivro){
     const autor = infoLivro.authors ? infoLivro.authors.join(', ') : 'Autor desconhecido';
     const publicado = infoLivro.publishedDate || 'Data desconhecida'
     const paginas = infoLivro.pageCount
-    const imagem = infoLivro.imageLinks ? infoLivro.imageLinks.thumbnail : 'Sem imagem';
+    const imagem = infoLivro.imageLinks ? infoLivro.imageLinks.thumbnail.replace("http", 'https') : '../Imagens/semCapa.svg';
     const editora = infoLivro.publisher || 'Editora desconhecida';
     const compra = infoLivro.canonicalVolumeLink || alert('Livro não disponível para a compra.');
     
